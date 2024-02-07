@@ -23,13 +23,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-=kg5m*t#zq29=%7*n8l19*5vq7+rga-^+(#%0rz_3p7hcltzi8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+#error not shown if debug is false 
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
 
 # Application definition
-
+#installed apps default
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
-
+#restriction security purpose
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -48,13 +49,13 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
 ROOT_URLCONF = 'myproject.urls'
 
+#
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR,"./templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
