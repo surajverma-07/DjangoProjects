@@ -4,10 +4,35 @@
         <style>
             h1{
                 background-color:lightblue;
+                text-align : center;
             }
         </style>
     </head>
     <body>
-        <h1>Mai hu home Page </h1>
+        <h1>{{head}}</h1>
+        <div>
+            {% for i in Slist %}
+                <div>{{forloop.counter}} {{i}}</div>
+                {% comment %} <div>{{forloop.counter0}} {{i}}</div> {% endcomment %}
+                {% comment %} <div>{{forloop.revcounter}} {{i}}</div> {% endcomment %}
+                {% comment %} <div>{{forloop.first}} {{i}}</div> {% endcomment %}
+                {% comment %} <div>{{forloop.last}} {{i}}</div> {% endcomment %}
+            {% endfor %}
+        </div>
+
+        <table border="2" cellpadding="7">
+            <tr>
+                <th>Name</th>
+                <th>Phone no.</th>
+            </tr>
+
+            {% for d in team_details %}
+            <tr>
+                  <td>{{d.name}}</td>
+                  <td>{{d.phone}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
     </body>
     </html>
