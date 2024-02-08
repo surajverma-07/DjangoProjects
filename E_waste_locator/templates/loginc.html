@@ -63,7 +63,7 @@
 <body>
     <div class="container">
         <h2>Login</h2>
-        <form action="/home" id="loginForm">
+        <form action="{% url 'home' %}" id="loginForm">
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
