@@ -9,7 +9,9 @@ def homePage(request):
            'team_details':[
                {'name':'suraj kumar verma', 'phone':'6266939975'},
                {'name':'Palak Verma', 'phone':'9301202706'}
-           ]
+           ],
+        #    'numbers':[1,92,33,4,6,71]
+           'numbers':[]
       }
     return render(request,"index.html",data)
 

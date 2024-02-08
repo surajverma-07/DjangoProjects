@@ -6,6 +6,9 @@
                 background-color:lightblue;
                 text-align : center;
             }
+            table{
+                margin:auto;
+            }
         </style>
     </head>
     <body>
@@ -20,7 +23,7 @@
             {% endfor %}
         </div>
 
-        <table border="2" cellpadding="7">
+        <table border="2" cellpadding="7" >
             <tr>
                 <th>Name</th>
                 <th>Phone no.</th>
@@ -33,6 +36,17 @@
             </tr>
             {% endfor %}
         </table>
+        <div>
+        {% if numbers|length > 0 %}    
+         {% for n in numbers %}
+           {% if n > 20 %} 
+            <div> {{n}} </div>
+            {% endif %} 
+         {%endfor%}    
+         {%else%}
+         <div>NO DATA FOUND</div>
+         {% endif %} 
+        </div>
 
     </body>
     </html>
