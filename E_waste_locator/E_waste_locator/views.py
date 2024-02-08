@@ -11,8 +11,19 @@ def signuplogV(request):
  return render(request,"Vsignuplogin.html")
 def loginE(request):
  return render(request,"login_ewaste.html")
+
 def loginC(request):
- return render(request,"loginc.html")
+ ans = ""
+ try:
+#   name = request.GET['username']
+#   passw = request.GET['password']
+  name = request.GET.get('username')
+  passw = request.GET.get('password')
+  ans = name+passw
+ except:
+  pass  
+ return render(request,"loginc.html",{'output':ans})
+
 def recycleD(request):
  return render(request,"recycle_dashboard.html")
 def status(request):

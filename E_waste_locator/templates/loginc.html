@@ -63,7 +63,7 @@
 <body>
     <div class="container">
         <h2>Login</h2>
-        <form action="{% url 'home' %}" id="loginForm">
+        <form action="{% url 'home' %}" method="get" id="loginForm">
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
@@ -75,6 +75,7 @@
             <div class="form-group">
                 <button type="submit">Login</button>
             </div>
+            {% comment %} <input type="text" value="{{output}}"/> {% endcomment %}
         </form>
     </div>
     <p id="message"></p>
